@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FeatureSelectionViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="FeatureSelectionViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="CarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="l" translatesAutoresizingMaskIntoConstraints="NO" id="acK-IN-Bdf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fu-M8-JtE">
+                                <rect key="frame" x="14" y="254" width="353" height="142"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="zEd-sC-au6"/>
+                                </constraints>
+                            </pickerView>
+                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kzC-eL-TQW">
+                                <rect key="frame" x="131" y="410.66666666666669" width="131" height="31.666666666666686"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="tableCellGroupedBackgroundColor"/>
+                                <connections>
+                                    <action selector="featureSelectionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="N4E-yV-1Uf"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Fu-M8-JtE" secondAttribute="trailing" constant="26" id="0Ts-Pr-vA5"/>
+                            <constraint firstItem="3Fu-M8-JtE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="22W-X1-wKf"/>
+                            <constraint firstItem="kzC-eL-TQW" firstAttribute="top" secondItem="3Fu-M8-JtE" secondAttribute="bottom" constant="14.666666666666686" id="EaQ-b6-MAU"/>
+                            <constraint firstItem="kzC-eL-TQW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="K2d-z2-wVH"/>
+                            <constraint firstItem="3Fu-M8-JtE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="195" id="X0N-7V-Eh0"/>
+                            <constraint firstItem="kzC-eL-TQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvP-Rs-x8k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="featureSegmentedControl" destination="kzC-eL-TQW" id="IYr-8c-ZVq"/>
+                        <outlet property="pickerView" destination="3Fu-M8-JtE" id="hcm-9S-ce2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="l" width="720" height="1280"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
